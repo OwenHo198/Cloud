@@ -1,0 +1,159 @@
+#menu_top{
+    margin-top: 60px;
+    margin-left: 20px;
+    background: #ffffff;
+    height: 60px;
+    border-radius: 10px 0px 0px 10px;
+}
+body{
+    font-size: 35px;
+}
+h1{
+    font-size: 50px;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif, black;
+    margin-top: 0px;
+    margin-left: 550px;
+    margin-right: 500px;
+    margin-bottom: 5px;
+}
+p{
+    font-size: 20px;
+    align-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, black;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+head{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h2{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+}
+	
+#rcorners1 {
+    border-radius: 25px;
+    background: #58257b;
+    color:white;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nameiP{
+    margin-top: 10px;
+    margin-left: 550px;
+    font-size: 70px;
+    color:#000;
+    width: 50px;
+}
+
+.nameMac{
+    margin-top: 10px;
+    margin-left: 550px;
+    font-size: 70px;
+    color:#000;
+    width: 50px;
+}
+
+.nameiPad{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 70px;
+}
+
+.img{
+    margin-top: -20px;
+    size: 10px;
+    width: 1349px;
+    height: 375px;
+}
+
+.imgiP{
+    margin-top: 10px;
+    margin-left: 570px;
+    margin-right: 500px;
+    width: 500px;
+}
+.imgMac{
+    margin-top: 20px;
+    margin-left: 350px;
+    width: 500px;
+}
+
+.imgiPad{
+    margin-top: 20px;
+    margin-left: 450px;
+    width: 300px;
+}
+
+.about{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search{
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.searchIcon{
+    font-size: 50px;
+}
+
+.learnMore{
+    margin-top: 0px;
+    margin-left: 700px;
+    margin-right: 600px;
+}
+
+.footer{
+    height: 100px;
+    width: 900px;
+    background:#ddd;
+    font-family: 'Times New Roman', Times, serif, white;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;   
+}
+
+   .carousel .carousel-indicators li {
+    background-color: #fff;
+    background-color: rgba(70,70,70,.25);
+  }
+  
+  .carousel .carousel-indicators .active {
+    background-color: #444;
+  }
+  
+  h1 {
+    margin: 60px auto;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+  }
+
+.carouselimg{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 1349px;
+    height: 375px;
+}
+
+
