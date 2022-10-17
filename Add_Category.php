@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">  
-	<?php
+	<?php 
 		include_once("Connect.php");
 	 	if(isset($_POST["btnAdd"])){
 			 $id=$_POST["txtbID"];
@@ -19,9 +19,9 @@
 			 }
 			 else{
 				 $sq="Select * from category where Cat_ID='$id' or Cat_Name='$name'";
-				 $result=mysqli_query($conn,$sq);
-				 if(mysqli_num_rows($result)==0){
-					 mysqli_query($conn,"INSERT INTO category (Cat_ID,Cat_Name, CAt_Des) VALUES ('$id', '$name', '$des') ");
+				 $result=pg_query($conn,$sq);
+				 if(pg_num_rows($result)==0){
+					pg_query($conn,"INSERT INTO category (Cat_ID,Cat_Name, CAt_Des) VALUES ('$id', '$name', '$des') ");
 					 echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
 				 }
 				 else{

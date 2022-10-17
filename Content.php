@@ -94,11 +94,11 @@ include_once("connect.php");
     <tr>
       <?php
       $No = 1;
-      $res = mysqli_query($conn, "SELECT Pro_Name, Pro_img, Price FROM product");
+      $res = pg_query($conn, "SELECT Pro_Name, Pro_img, Price FROM product");
       if (!$res) {
         die("Invalid query:  " . mysqli_error($conn));
       }
-      while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) 
+      while ($row = pg_fetch_array($res)) 
       {
         if($No %7 !=0)
         {

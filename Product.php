@@ -22,7 +22,7 @@ if (isset($_SESSION['us']) == false) {
         if (isset($_GET["function"]) == "del") {
             if (isset($_GET["id"])) {
                 $id = $_GET["id"];
-                mysqli_query($conn, "DELETE FROM product WHERE Pro_ID ='$id'") or die(mysqli_error($conn));
+                pg_query($conn, "DELETE FROM product WHERE Pro_ID ='$id'") or die(mysqli_error($conn));
             }
         }
         ?>
