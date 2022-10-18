@@ -24,7 +24,7 @@ else{
         if (isset($_GET["function"]) == "del") {
             if (isset($_GET["id"])) {
                 $id = $_GET["id"];
-                pg_query($conn, "DELETE FROM category WHERE Cat_ID='$id'");
+                pg_query($conn, "DELETE FROM Category WHERE CatgoryID='$id'");
             }
         }
         ?>
@@ -47,18 +47,18 @@ else{
                 <?php
                 include_once("Connect.php");
                 $No = 1;
-                $result = pg_query($conn, "SELECT * FROM category");
+                $result = pg_query($conn, "SELECT * FROM Category");
                 while ($row = pg_fetch_array($result)) {
                 ?>
                     <tr>
                         <td class="Category"><?php echo $No; ?></td>
-                        <td><?php echo $row["Cat_Name"]; ?></td>
-                        <td><?php echo $row["CAt_Des"]; ?></td>
+                        <td><?php echo $row["CatgoryID"]; ?></td>
+                        <td><?php echo $row["CatgoryName"]; ?></td>
                         <td style='text-align:center'>
-                            <a href="?page=Update_Category&&id=<?php echo $row["Cat_ID"]; ?>" class="glyphicon glyphicon-pencil"></a>
+                            <a href="?page=Update_Category&&id=<?php echo $row["CatgoryID"]; ?>" class="glyphicon glyphicon-pencil"></a>
                         </td>
                         <td style='text-align:center'>
-                            <a href="?page=Category&&function=del&&id=<?php echo $row["Cat_ID"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()">
+                            <a href="?page=Category&&function=del&&id=<?php echo $row["CatgoryID"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()">
                             </a>
                         </td>
                     </tr>

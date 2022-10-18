@@ -6,11 +6,10 @@
 		include_once("Connect.php");
 		if(isset($_GET["id"])){
 			$id=$_GET["id"];
-			$result=mysqli_query($conn, "SELECT * FROM category WHERE Cat_ID='$id'");
-			$row=mysqli_fetch_array($result, MYSQLI_ASSOC);
-			$cat_id=$row['Cat_ID'];
-			$cat_name=$row['Cat_Name'];
-			$cat_des=$row['CAt_Des'];
+			$result=pg_query($conn, "SELECT * FROM Category WHERE CatgoryID='$id'");
+			$row=pg_fetch_array($result);
+			$cat_id=$row['CatgoryID'];
+			$cat_name=$row['CatgoryName'];
 	?>
 	<?php
 		}
@@ -36,14 +35,6 @@
 								  value='<?php echo $cat_name; ?>'>
 							</div>
 				</div>
-          
-                 <div class="form-group">
-						    <label for="txtbMoTa" class="col-sm-2 control-label">Description:  </label>
-							<div class="col-sm-10">
-								  <input type="text" name="txtbDes" id="txtbDes" class="form-control" placeholder="Description" 
-								  value='<?php echo $cat_des; ?>'>
-							</div>
-				</div>
                     
 				<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
@@ -66,10 +57,10 @@
 				echo"<ul>$err</ul>";
 			}
 			else{
-				$sq="SELECT * From Category WHERE Cat_ID !='$id' and Cat_Name='$name'";
-				$result=mysqli_query($conn,$sq);
-				if(mysqli_num_rows($result)==0){
-					mysqli_query($conn, "UPDATE category SET Cat_Name='$name', CAt_Des='$des' WHERE Cat_ID='$id'");
+				$sq="SELECT * From Category WHERE CatgoryID !='$id' and CatgoryName='$name'";
+				$result=pg_query($conn,$sq);
+				if(pg_num_rows($result)==0){
+					pg_query($conn, "UPDATE Category SET CatgoryName='$name' WHERE CatgoryID='$id'");
 					echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
 				}
 				else{

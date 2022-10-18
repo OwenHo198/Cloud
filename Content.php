@@ -105,8 +105,8 @@ include_once("connect.php");
       ?>
           <td>
             <div class="card-body text-center">
-              <img src="images/<?php echo $row['Pro_img'] ?>" class="card-img-top " width="400px" height="250px">
-              <h5 class="card-title"><?php echo $row['Pro_Name'] ?></h5>
+              <img src="images/<?php echo $row['Productimg'] ?>" class="card-img-top " width="400px" height="250px">
+              <h5 class="card-title"><?php echo $row['ProductName'] ?></h5>
               <p class="card-text">From $<?php echo $row['Price'] ?></p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
@@ -119,8 +119,8 @@ include_once("connect.php");
           ?>
           <td>
             <div class="card-body text-center">
-              <img src="images/<?php echo $row['Pro_img'] ?>" class="card-img-top " width="400px" height="250px">
-              <h5 class="card-title"><?php echo $row['Pro_Name'] ?></h5>
+              <img src="images/<?php echo $row['Productimg'] ?>" class="card-img-top " width="400px" height="250px">
+              <h5 class="card-title"><?php echo $row['ProductName'] ?></h5>
               <p class="card-text">From $<?php echo $row['Price'] ?></p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>

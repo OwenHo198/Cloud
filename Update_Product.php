@@ -11,18 +11,18 @@
 <?php
 		include_once("Connect.php");
 		function bind_Category_List($conn, $selectedValue){
-			$sqlstring = "SELECT Cat_ID, Cat_Name from category";
-			$result = mysqli_query($conn, $sqlstring);
+			$sqlstring = "SELECT CatgoryID, CatgoryName from Category";
+			$result = pg_query($conn, $sqlstring);
 			echo "<select name='CategoryList' class='form-control'>
 					option value='0'>Choose category</option>";
-					while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+					while ($row = pg_fetch_array($result))
 					{
-						if ($row['Cat_ID'] == $selectedValue)
+						if ($row['CatgoryID'] == $selectedValue)
 						{
-							echo "<option value='" . $row['Cat_ID']."' selected>".$row['Cat_Name']."</option>";
+							echo "<option value='" . $row['CatgoryID']."' selected>".$row['CatgoryName']."</option>";
 						}
 						else{
-							echo "<option value='" .$row['Cat_ID']."'>".$row['Cat_Name']."</option>";
+							echo "<option value='" .$row['CatgoryID']."'>".$row['CatgoryName']."</option>";
 						}
 					}
 			echo"</select>";
@@ -30,11 +30,10 @@
 		if(isset($_GET["id"]))
 		{
 			$id = $_GET["id"];
-			$sqlstring = "SELECT Pro_Name, Price, SmallDes, DetailDes, ProDate
-			, Pro_qty, Pro_Img, Cat_ID FROM product WHERE Pro_ID='$id' ";
-			$result=mysqli_query($conn, $sqlstring);
-			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-			$pro_name 	= $row["Pro_Name"];
+			$sqlstring = "SELECT ProductName, Price, DetailDes, ProductQuantity, CatgoryID FROM Product WHERE ProductID='$id' ";
+			$result=pg_query($conn, $sqlstring);
+			$row = pg_fetch_array($result);
+			$pro_name 	= $row["ProductName"];
 			$short_des 	= $row["SmallDes"];
 			$detail_des = $row["DetailDes"];
 			$price 		= $row["Price"];

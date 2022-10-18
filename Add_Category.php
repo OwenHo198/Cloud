@@ -6,7 +6,6 @@
 	 	if(isset($_POST["btnAdd"])){
 			 $id=$_POST["txtbID"];
 			 $name=$_POST["txtbName"];
-			 $des=$_POST["txtbDes"];
 			 $err="";
 			 if($id==""){
 				 $err.="<li>Please enter Category ID!</li>";
@@ -18,10 +17,10 @@
 				 echo "<ul>$err</ul>";
 			 }
 			 else{
-				 $sq="Select * from category where Cat_ID='$id' or Cat_Name='$name'";
+				 $sq="Select * from Category where CategoryID='$id' or CategoryName='$name'";
 				 $result=pg_query($conn,$sq);
 				 if(pg_num_rows($result)==0){
-					pg_query($conn,"INSERT INTO category (Cat_ID,Cat_Name, CAt_Des) VALUES ('$id', '$name', '$des') ");
+					pg_query($conn,"INSERT INTO Category (CatgoryID,CatgoryName) VALUES ('$id', '$name') ");
 					 echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
 				 }
 				 else{
@@ -45,12 +44,12 @@
 							      <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Catepgy Name" value='<?php echo isset($_POST["txtbName"])?($_POST["txtbName"]):"";?>'>
 							</div>
 					</div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
 						    <label for="txtbMoTa" class="col-sm-2 control-label">Description:</label>
 							<div class="col-sm-10">
-							      <input type="text" name="txtbDes" id="txtbDes" class="form-control" placeholder="Description" value='<?php echo isset($_POST["txtbDes"])?($_POST["txtbDes"]):"";?>'>
+							      <input type="text" name="txtbDes" id="txtbDes" class="form-control" placeholder="Description" value='< php echo isset($_POST["txtbDes"])?($_POST["txtbDes"]):"";?>'>
 							</div>
-					</div>
+					</div> -->
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 						      <input type="submit"  class="btn btn-primary" name="btnAdd" id="btnAdd" value="Add"/>

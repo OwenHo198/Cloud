@@ -4,26 +4,26 @@
 <?php
 	include_once("Connect.php");
 	function bind_Category_List($conn){
-		$sqlistring="SELECT CatID, CatName from Category";
+		$sqlistring="SELECT CatgoryID, CatgoryName from Category";
 		$result=pg_query($conn, $sqlistring);
 		echo"<select name='CategoryList' class='form-control'>
 		<option value='0'>
-			Choose category
+			Choose Category
 		</option>";
 		while($row=pg_fetch_array($result)){
-			echo "<option value='".$row['CatID']."'>".$row['CatName']."</option>";
+			echo "<option value='".$row['CatgoryID']."'>".$row['CatgoryName']."</option>";
 		}
 		echo "</select>"; 
 	}
 	if(isset($_POST["btnAdd"])){
 		$id=$_POST["txtbID"];
 		$proname=$_POST["txtbName"];
-		$small=$_POST["txtbShort"];
-		$detail=$_POST["txtbDetail"];
 		$price=$_POST["txtbPrice"];
 		$qty=$_POST["txtbqty"];
-		$pic=$_FILES['txtbImage'];
-		$category=$_POST['CategoryList'];
+		$CatID=$_FILES['txtbCatID'];
+		$CatName=$_POST['CategoryCatName'];
+		$pic=$_POST['txtbImage'];
+		$suppiler=$_POST['txtbSup'];
 		$err="";
 		if(trim($id)==""){
 			$err.="<li>Please enter Product ID!</li>";
@@ -31,14 +31,17 @@
 		if(trim($proname)==""){
 			$err.="<li>Please enter Product Name!</li>";
 		}
-		if($category=="0"){
-			$err.="<li>Please choose Product Category!</li>";
-		}
 		if(!is_numeric($price)){
 			$err.="<li>Product price must be number!</li>";
 		}
 		if(!is_numeric($qty)){
 			$err.="<li>Product quantity must be number!</li>";
+		}
+		if(!is_numeric($CatID)){
+			$err.="<li>Please enter category ID!</li>";
+		}
+		if(!is_numeric($CatName)){
+			$err.="<li>Please enter category name!</li>";
 		}
 		if($err.=""){
 			echo "<ul>$err</ul>";	
@@ -46,13 +49,13 @@
 		else{
 			if($pic['type']=="image/jpg" || $pic['type']=="image/jpeg" || $pic['type']=="image/png" || $pic['type']=="image/gif"){
 				if($pic['size']<=614400){
-					$sq="Select * from product where ProductID='$id'or ProductName='$proname'";
+					$sq="Select * from Product where ProductID='$id'or ProductName='$proname'";
 					$result=pg_query($conn, $sq);
 					if(pg_num_rows($result)==0){
 						copy($pic['tmp_name'], "Images/".$pic['name']);
 						$filePic=$pic['name'];
-						$sql="INSERT INTO product (ProductID, ProductName, Price, RealPrice, OrderDate, DeliveryDate, Quantity, CatID)
-                                    VALUES('$id', '$proname', '$price', '0', '$small', '$detail', '".date('Y-m-d H:i:s')."', $qty, '$filePic', '$category')";		
+						$sql="INSERT INTO Product (ProductID, ProductName, Price, OrderDate, DeliveryDate, ProductQuantity, CategoryID, SuppilerID)
+                                    VALUES('$id', '$proname', '$price', '0', '$small', '$detail', '".date('Y-m-d H:i:s')."', $qty, '$filePic', '$category','')";		
 						pg_query($conn, $sql);
 						echo '<meta http-equiv="refresh" content="0;URL=?page=Product"/>';
 					}
