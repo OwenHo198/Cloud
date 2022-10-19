@@ -17,7 +17,7 @@ include_once("connect.php");
 <table>
   <tr>
     <td>
-      <img style="width: 1500px; margin-top:-20px" src="images/ToyStore-OwenStore.png" />
+      <img style="width:auto; margin-top:-20px" src="images/ToyStore-OwenStore.png" />
     </td>
   </tr>
   <!-- <tr>
@@ -71,8 +71,8 @@ include_once("connect.php");
     <td>
       <img src="images/iPhoneSEMainPage.PNG" style="width:600px; margin-left:350px" />
     </td>
-  </tr>
-</table> -->
+  </tr>-->
+</table> 
 <table>
   <br>
   <div id="About" style="background-color:dimgrey; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
