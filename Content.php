@@ -77,9 +77,9 @@ include_once("connect.php");
   <br>
   <div id="About" style="background-color:dimgrey; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
     <h1 style="color:white; margin-top:50px; font-size:50px">About Us</h1>
-    <p class="about">
-      <strong><i> Owen Store</i></strong> is Authorised Reseller of<b><i> Apple</i>.</b><strong><i> Owen Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.
-      <strong><i> Owen Store</i></strong> opened in 2020, quickly becoming a trusted location for Vietnamese customers.
+    <p class="aboutus">
+      <strong><i> ATN Store</i></strong> is Authorised Reseller of<b><i> Toy</i>.</b><strong><i> ATN Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.
+      <strong><i> ATN Store</i></strong> opened in 2020, quickly becoming a trusted location for Vietnamese customers.
       We have been and will continue to work to deliver different and rich authentic technological items at the greatest rates under the slogan
       <i>"If what we don't have, then you don't need it."</i> market in order to meet the needs of customers.
       <br />
