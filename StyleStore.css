@@ -11,12 +11,11 @@ body{
 h1{
     font-size: 50px;
     align-content: center;
-    font-family: 'Times New Roman', Times, serif, black;
+    font-family: 'Times New Roman', Times, serif, white;
     margin-top: 0px;
     margin-left: 0%;
     margin-right: 0%;
     margin-bottom: 5px;
-    color:white;
 }
 p{
     font-size: 20px;
