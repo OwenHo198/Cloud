@@ -16,8 +16,8 @@ include_once("connect.php");
 ?>
 <table>
   <tr>
-    <td>
-      <img style="width:100%; margin-top:-20px" src="images/ToyStore-OwenStore.png" />
+    <td class="main picture">
+      <img style="margin-top:-20px" src="images/ToyStore-OwenStore.png" />
     </td>
   </tr>
   <!-- <tr>
