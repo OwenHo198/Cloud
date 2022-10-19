@@ -158,13 +158,13 @@ h2{
 #Main_Pic{
     margin: 0% 0% 0% 0%;
     width: auto;
-    height: 500px;
+    height: auto;
 }
 #About{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 0%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:dimgrey;
 }
-
 
