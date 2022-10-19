@@ -160,5 +160,11 @@ h2{
     width: auto;
     height: 500px;
 }
+#About{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
