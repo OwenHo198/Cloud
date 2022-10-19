@@ -73,7 +73,7 @@ include_once("connect.php");
     </td>
   </tr>-->
 </table> 
-<!-- <table>
+<table>
   <br>
   <div id="About" style="background-color:dimgrey; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
     <h1 style="color:white; margin-top:50px; font-size:50px">About Us</h1>
@@ -85,7 +85,7 @@ include_once("connect.php");
       <br />
     </p>
   </div>
-</table> -->
+</table>
 <table>
   <!-- show -->
 
