@@ -15,9 +15,9 @@
 include_once("connect.php");
 ?>
 <table>
-  <tr>
-    <td >
-      <img class="Main_Pic" src="images/ToyStore-OwenStore.png" />
+  <tr class="Main_Pic">
+    <td>
+      <img  src="images/ToyStore-OwenStore.png" />
     </td>
   </tr>
   <!-- <tr>
