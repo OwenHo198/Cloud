@@ -77,7 +77,7 @@ include_once("connect.php");
   <br>
   <div id="About" style="background-color:dimgrey; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
     <h1 style="color:white; margin-top:50px; font-size:50px">About Us</h1>
-    <p class="about" style="font-size:30px; margin-left:60px; margin-right:60px; color:white">
+    <p class="about">
       <strong><i> Owen Store</i></strong> is Authorised Reseller of<b><i> Apple</i>.</b><strong><i> Owen Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.
       <strong><i> Owen Store</i></strong> opened in 2020, quickly becoming a trusted location for Vietnamese customers.
       We have been and will continue to work to deliver different and rich authentic technological items at the greatest rates under the slogan
@@ -94,7 +94,7 @@ include_once("connect.php");
     <tr>
       <?php
       $No = 1;
-      $res = pg_query($conn, "SELECT Pro_Name, Pro_img, Price FROM product");
+      $res = pg_query($conn, "SELECT ProductName, ProductImg, Price FROM Product");
       if (!$res) {
         die("Invalid query:  " . mysqli_error($conn));
       }
