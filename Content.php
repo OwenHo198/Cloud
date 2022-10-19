@@ -78,11 +78,11 @@ include_once("connect.php");
   <div id="About">
     <h1>About Us</h1>
     <p class="aboutus">
-      <strong><i> ATN Store</i></strong> is Authorised Reseller of<b><i> Toy</i>.</b><strong><i> ATN Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.
+      <strong><i> ATN Store</i></strong> is Authorised Reseller of<b><i> Toy</i>.</b><strong><i> ATN Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.</br>
       <strong><i> ATN Store</i></strong> opened in 2020, quickly becoming a trusted location for Vietnamese customers.
       We have been and will continue to work to deliver different and rich authentic technological items at the greatest rates under the slogan
       <i>"If what we don't have, then you don't need it."</i> market in order to meet the needs of customers.
-      <br />
+      <br/>
     </p>
   </div>
 </table>
