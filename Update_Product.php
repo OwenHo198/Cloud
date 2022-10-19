@@ -34,12 +34,10 @@
 			$result=pg_query($conn, $sqlstring);
 			$row = pg_fetch_array($result);
 			$pro_name 	= $row["ProductName"];
-			$short_des 	= $row["SmallDes"];
-			$detail_des = $row["DetailDes"];
 			$price 		= $row["Price"];
-			$qty 		= $row["Pro_qty"];
-			$image 		= $row["Pro_Img"];
-			$category 	= $row["Cat_ID"];
+			$qty 		= $row["ProductQuantity"];
+			$image 		= $row["ProductImg"];
+			$category 	= $row["CategoryID"];
 	?>
 <div class="container">
 	<h2>Updating Product</h2>
