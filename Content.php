@@ -76,7 +76,7 @@ include_once("connect.php");
 <table>
   <br>
   <div id="About" style="background-color:dimgrey; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-    <h1 style="color:white; margin-top:50px; font-size:50px">About Us</h1>
+    <h1>About Us</h1>
     <p class="aboutus">
       <strong><i> ATN Store</i></strong> is Authorised Reseller of<b><i> Toy</i>.</b><strong><i> ATN Store</i></strong> is a leading retailer in the Vietnam market, focusing in supplying authentic technological items.
       <strong><i> ATN Store</i></strong> opened in 2020, quickly becoming a trusted location for Vietnamese customers.
