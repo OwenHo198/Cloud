@@ -156,8 +156,8 @@ h2{
     height: 375px;
 }
 #Main_Pic{
-    width:auto;
-    height: auto;
+    width: 0%;
+    height: 0%;
 }
 
 
