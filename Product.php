@@ -50,7 +50,7 @@ if (isset($_SESSION['us']) == false) {
                     <?php
                     include_once("Connect.php");
                     $No = 1;
-                    $result = pg_query($conn, "SELECT ProductID, ProductName, Price, ProductQuantity,CatgoryID, SuppilerID FROM Product a, Category b WHERE a.CatgoryID=b.CatogryID ORDER BY ProductDate DESC");
+                    $result = pg_query($conn, "SELECT ProductID, ProductName, Price, ProductQuantity, CatgoryID, SuppilerID FROM Product a, Category b WHERE a.CatgoryID=b.CatogryID ORDER BY ProductDate DESC");
                     while ($row = pg_fetch_array($result)) {
                     ?>
                         <tr>
