@@ -87,7 +87,7 @@
     include("Content.php");
   }
   ?>
- 
+<img style="width:fix;height:fix"  src="images/ToyStore-OwenStore.png" />
 </body>
 <footer>
     <div class="jumbotron text-center" style="margin-bottom:0">
