@@ -14,13 +14,14 @@
 <?php
 include_once("connect.php");
 ?>
-<table>
+<img style="width: fit-content;height:fit-content"  src="images/ToyStore-OwenStore.png" />
+<!-- <table>
   <tr>
     <td>
-      <img id="Main_Pic"  src="images/ToyStore-OwenStore.png" />
+      
     </td>
   </tr>
-  <!-- <tr>
+  <tr>
     <td>
       <p style="font-size:80px; color:black; margin-left: 455px; margin-top:50px">
         Oh. So. Pro.
@@ -71,8 +72,8 @@ include_once("connect.php");
     <td>
       <img src="images/iPhoneSEMainPage.PNG" style="width:600px; margin-left:350px" />
     </td>
-  </tr>-->
-</table> 
+  </tr>
+</table>  -->
 <table>
   <br>
   <div id="About">
