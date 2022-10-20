@@ -74,7 +74,7 @@ include_once("connect.php");
     </td>
   </tr>
 </table>  -->
-<table>
+<!-- <table>
   <br>
   <div id="About">
     <h1>About Us</h1>
@@ -87,7 +87,7 @@ include_once("connect.php");
     </p>
   </div>
 </table>
-<table>
+<table> -->
   <!-- show -->
 
   <table class="text-center">
