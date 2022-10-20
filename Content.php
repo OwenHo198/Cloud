@@ -118,8 +118,8 @@ include_once("connect.php");
     </p>
   </div>
 </table>
-<table> 
-  <!-- show -->
+<!--<table> 
+  show -->
 
   <table class="text-center">
     <hr style="margin-left:80px; margin-right:80px">
@@ -164,7 +164,6 @@ include_once("connect.php");
       ?>
     </tr>
   </table>
-</table>
 </body>
 <footer>
     <div class="jumbotron text-center" style="margin-bottom:0">
