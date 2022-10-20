@@ -87,7 +87,9 @@
     include("Content.php");
   }
   ?>
-  <footer>
+ 
+</body>
+<footer>
     <div class="jumbotron text-center" style="margin-bottom:0">
       <p>
         Address: Can Tho, Vietnam
@@ -100,5 +102,4 @@
       </p>
     </div>
   </footer>
-</body>
 </html>
