@@ -87,19 +87,7 @@
     include("Content.php");
   }
   ?>
-<img style="width:fix;height:fix"  src="images/ToyStore-OwenStore.png" />
+
 </body>
-<footer>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-      <p>
-        Address: Can Tho, Vietnam
-      </p>
-      <p>
-        Tel: +84 766 874 949
-      </p>
-      <p>
-        Copyright © 2022. All rights reserved.
-      </p>
-    </div>
-  </footer>
+
 </html>
