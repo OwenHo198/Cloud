@@ -14,13 +14,13 @@
 <?php
 include_once("connect.php");
 ?>
-
-<!-- <table>
+<body>
+<table>
   <tr>
     <td>
       <img style="width:fix;height:fix"  src="images/ToyStore-OwenStore.png" />
     </td>
-  </tr> -->
+  </tr>
   <!--<tr>
     <td>
       <p style="font-size:80px; color:black; margin-left: 455px; margin-top:50px">
@@ -134,6 +134,7 @@ include_once("connect.php");
     </tr>
   </table>
 </table>
+</body>
 <footer>
     <div class="jumbotron text-center" style="margin-bottom:0">
       <p>
@@ -146,7 +147,7 @@ include_once("connect.php");
         Copyright © 2022. All rights reserved.
       </p>
     </div>
-  </footer>
+</footer>
 </html>
 
 
