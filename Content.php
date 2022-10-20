@@ -18,7 +18,7 @@ include_once("connect.php");
 ?>
 <body>
 <div class="carousel-item active">
-      <img class="d-block w-100" src="images/ToyStore-OwenStore.png" alt="First slide">
+      <img class="d-block w-100" src="images/ToyStore-ANTStore.png">
 </div> 
 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
    <ol class="carousel-indicators">
