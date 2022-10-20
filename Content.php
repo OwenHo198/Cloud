@@ -14,14 +14,14 @@
 <?php
 include_once("connect.php");
 ?>
-<img style="width:auto;height:auto"  src="images/ToyStore-OwenStore.png" />
-<!-- <table>
+
+<table>
   <tr>
     <td>
-      
+      <img style="width:fix;height:fix"  src="images/ToyStore-OwenStore.png" />
     </td>
   </tr>
-  <tr>
+  <!--<tr>
     <td>
       <p style="font-size:80px; color:black; margin-left: 455px; margin-top:50px">
         Oh. So. Pro.
