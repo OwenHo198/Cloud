@@ -165,19 +165,7 @@ include_once("connect.php");
     </tr>
   </table>
 </body>
-<footer>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-      <p>
-        Address: Can Tho, Vietnam
-      </p>
-      <p>
-        Tel: +84 766 874 949
-      </p>
-      <p>
-        Copyright © 2022. All rights reserved.
-      </p>
-    </div>
-</footer>
+
 </html>
 
 

@@ -13,7 +13,7 @@ if (isset($_POST['btnLogin'])) {
   } else {
     include_once("Connect.php");
     $pass = md5($pa);
-    $res = pg_query($conn, "SELECT Username, Password, State FROM customer WHERE Username='$us'AND Password='$pass'");
+    $res = pg_query($conn, "SELECT Username, Password, State FROM Customer WHERE Username='$us'AND Password='$pass'" or die("Connect fail!"));
     $row = pg_fetch_array($res);
     if (pg_num_rows($res) == 1) {
       $_SESSION['us'] = $us;
