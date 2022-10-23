@@ -8,40 +8,40 @@
 			 $name=$_POST["txtbName"];
 			 $err="";
 			 if($id==""){
-				 $err.="<li>Please enter Category ID!</li>";
+				 $err.="<li>Please enter Supplier ID!</li>";
 			 }
 			 if($name==""){
-				 $err.="<li>Please enter Category Name!</li>";
+				 $err.="<li>Please enter Supplier Name!</li>";
 			 }
 			 if($err!==""){
 				 echo "<ul>$err</ul>";
 			 }
 			 else{
-				 $sq="Select * from category where categoryid='$id' or categoryname='$name'";
+				 $sq="Select * from suppiler where suppilerid='$id' or suppilername='$name'";
 				 $result=pg_query($conn,$sq);
 				 if(pg_num_rows($result)==0){
-					pg_query($conn,"INSERT INTO category (categoryid,categoryname) VALUES ('$id', '$name') ");
-					 echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
+					pg_query($conn,"INSERT INTO suppiler (suppilerid,suppilername) VALUES ('$id', '$name') ");
+					 echo '<meta http-equiv="refresh" content="0; URL=?page=Suplier" />';
 				 }
 				 else{
-					 echo "<li>Already category ID or Name!</li>";
+					 echo "<li>Already supplier ID or Name!</li>";
 				 }
 			 }
 		 }
 	?>
 <div class="container">
-	<h2>Adding Category</h2>
+	<h2>Adding Supplier</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtbTen" class="col-sm-2 control-label">Category ID:</label>
+						    <label for="txtbTen" class="col-sm-2 control-label">Supplier ID:</label>
 							<div class="col-sm-10">
-							      <input style="length:50px" type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Category ID" value='<?php echo isset($_POST["txtbID"])?($_POST["txtbID"]):"";?>'>
+							      <input style="length:50px" type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Supplier ID" value='<?php echo isset($_POST["txtbID"])?($_POST["txtbID"]):"";?>'>
 							</div>
 					</div>	
 					<div class="form-group">
-						    <label for="txtTen" class="col-sm-2 control-label">Category Name:</label>
+						    <label for="txtTen" class="col-sm-2 control-label">Supplier Name:</label>
 							<div class="col-sm-10">
-							      <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Catepgy Name" value='<?php echo isset($_POST["txtbName"])?($_POST["txtbName"]):"";?>'>
+							      <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Supplier Name" value='<?php echo isset($_POST["txtbName"])?($_POST["txtbName"]):"";?>'>
 							</div>
 					</div>
                     <!-- <div class="form-group">

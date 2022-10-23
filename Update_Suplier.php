@@ -6,32 +6,32 @@
 		include_once("Connect.php");
 		if(isset($_GET["id"])){
 			$id=$_GET["id"];
-			$result=pg_query($conn, "SELECT * FROM category WHERE CategoryID='$id'");
+			$result=pg_query($conn, "SELECT * FROM suppiler WHERE SuppilerID='$id'");
 			$row=pg_fetch_array($result);
-			$cat_id=$row['CategoryID'];
-			$cat_name=$row['CategoryName'];
+			$store_id=$row['SuppilerID'];
+			$cat_name=$row['SuppilerName'];
 	?>
 	<?php
 		}
 		else{
-			echo'<meta http-equiv="refresh" content="0;URL=Category.php" />';
+			echo'<meta http-equiv="refresh" content="0;URL=Suplier.php" />';
 		}
 	?>
 	
 <div class="container">
-	<h2>Updating Product Category</h2>
+	<h2>Updating Store</h2>
 			 	<form id="form1" name="form1" method="post" action="" class="form-horizontal" role="form">
 				 <div class="form-group">
-						    <label for="txtbTen" class="col-sm-2 control-label">Category ID:  </label>
+						    <label for="txtbTen" class="col-sm-2 control-label">Supplier ID:  </label>
 							<div class="col-sm-10">
-								  <input type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Catepgy ID" readonly 
-								  value='<?php echo $cat_id; ?>'>
+								  <input type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Store ID" readonly 
+								  value='<?php echo $store_id; ?>'>
 							</div>
 				</div>	
 				 <div class="form-group">
-						    <label for="txtbTen" class="col-sm-2 control-label">Category Name:  </label>
+						    <label for="txtbTen" class="col-sm-2 control-label">Supplier Name:  </label>
 							<div class="col-sm-10">
-								  <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Catepgy Name" 
+								  <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Store Name" 
 								  value='<?php echo $cat_name; ?>'>
 							</div>
 				</div>
@@ -48,23 +48,23 @@
 		if(isset($_POST["btnUpdate"])){
 			$id=$_POST["txtbID"];
 			$name=$_POST["txtbName"];
-			$des=$_POST["txtbDes"];
+			// $des=$_POST["txtbDes"];
 			$err="";
 			if($name==""){
-				$err.="<li>Please enter Category Name!</li>";
+				$err.="<li>Please enter supplier name!</li>";
 			}
 			if($err!=""){
 				echo"<ul>$err</ul>";
 			}
 			else{
-				$sq="SELECT * From category WHERE CategoryID !='$id' and CategoryName='$name'";
+				$sq="SELECT * From store WHERE SuppilerID !='$id' and SuppilerName='$name'";
 				$result=pg_query($conn,$sq);
 				if(pg_num_rows($result)==0){
-					pg_query($conn, "UPDATE Category SET CategoryName='$name' WHERE CategoryID='$id'");
-					echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
+					pg_query($conn, "UPDATE suppiler SET SuppilerName='$name' WHERE SuppilerID='$id'");
+					echo '<meta http-equiv="refresh" content="0; URL=?page=Suplier" />';
 				}
 				else{
-					echo "<li>Already Category Name!</li>";
+					echo "<li>Already Store Name!</li>";
 				}
 			}
 		}

@@ -24,12 +24,12 @@ else{
         if (isset($_GET["function"]) == "del") {
             if (isset($_GET["id"])) {
                 $id = $_GET["id"];
-                pg_query($conn, "DELETE FROM Category WHERE CatgoryID='$id'");
+                pg_query($conn, "DELETE FROM category WHERE categoryid='$id'");
             }
         }
         ?>
     <form name="frm" method="post" action="">
-        <h1>Category</h1>
+        <h1>Category Managment</h1>
         <p>
             <a class="glyphicon glyphicon-plus" href="?page=Add_Category" style="margin-left:0px">Add</a>
         </p>
@@ -47,18 +47,18 @@ else{
                 <?php
                 include_once("Connect.php");
                 $No = 1;
-                $result = pg_query($conn, "SELECT * FROM Category");
+                $result = pg_query($conn, "SELECT * FROM category");
                 while ($row = pg_fetch_array($result)) {
                 ?>
                     <tr>
                         <td class="Category"><?php echo $No; ?></td>
-                        <td><?php echo $row["CatgoryID"]; ?></td>
-                        <td><?php echo $row["CatgoryName"]; ?></td>
+                        <td><?php echo $row["categoryid"]; ?></td>
+                        <td><?php echo $row["categoryname"]; ?></td>
                         <td style='text-align:center'>
-                            <a href="?page=Update_Category&&id=<?php echo $row["CatgoryID"]; ?>" class="glyphicon glyphicon-pencil"></a>
+                            <a href="?page=Update_Category&&id=<?php echo $row["categoryid"]; ?>" class="glyphicon glyphicon-pencil"></a>
                         </td>
                         <td style='text-align:center'>
-                            <a href="?page=Category&&function=del&&id=<?php echo $row["CatgoryID"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()">
+                            <a href="?page=Category&&function=del&&id=<?php echo $row["categoryid"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()">
                             </a>
                         </td>
                     </tr>

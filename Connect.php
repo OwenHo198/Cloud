@@ -4,11 +4,11 @@
 	
 	mysqli_query($Connect,'SET NAMES "utf8"');
 	//mysqli_close($Connect);*/
-	$Connect = pg_connect("postgres://ciocoljphegkiz:2ad8543206b87c7d4a126cb77aeb1ef0daa7e28570549133c73d73e04982ef94@ec2-3-220-207-90.compute-1.amazonaws.com:5432/d2l6jhcru6rleg");
+	$conn = pg_connect("postgres://zpircocemsqdrp:20d825e0fa0bdaa94522ebc1115e461d354e429b6a2845f96df60c10c48dad0e@ec2-35-170-146-54.compute-1.amazonaws.com:5432/d3joh403v838aq");
     //$Connect = pg_connect("host=localhost port=5432 dbname=postgres");
 	//$Connect = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=123456");
 	
-    if (!$Connect) {
+    if (!$conn) {
         die("Connection failed");
     }
 ?>

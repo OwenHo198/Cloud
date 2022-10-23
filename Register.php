@@ -9,25 +9,29 @@
     <?php
     if (isset($_POST['btnRegister'])) {
         $us = $_POST['txtbUsername'];
+        $cusname = $_POST['txtbUserFName'];
         $pa = $_POST['txtbPass'];
-        $rpa = $_POST['txtbRePass'];
-        $cusname = $_POST['txtbCusName'];
+        // $rpa = $_POST['txtbRePass'];
         $phone = $_POST['txtbPhone'];
         $address = $_POST['txtbAddress'];
+        echo $us;
+        echo $cusname;
+        echo $pa;
+        
         $err = "";
         if ($err != "") {
             echo $err;
         } else {
             include_once("Connect.php");
             $pass = md5($pa);
-            $sq = "SELECT * FROM Customer WHERE Username = '$us'";
+            $sq = "SELECT * FROM userr WHERE account = '$us'";
             $res = pg_query($conn, $sq);
             if (pg_num_rows($res) == 0) {
-                pg_query($conn, "INSERT INTO Customer(Username, Password, CustomerName, Phone, Address, State) 
-                Values ('$us','$pass','$cusname', '$phone','$address', 0)");
-                echo '<meta http-equiv="refresh" content = "2; URL=index.php"/>';
+                pg_query($conn, "INSERT INTO userr (account, userfname, userpassword, phone, address, state) 
+                Values ('$us', '$cusname', '$pa', '$phone','$address', 0)");
+                echo '<meta http-equiv="refresh" content = "100; URL=index.php"/>';
             } else {
-                echo "Username already exists";
+                echo "Username already exists!";
             }
         }
     }
@@ -49,32 +53,33 @@
                         </div>
                         <div class="form-group">
                             <div class="left-inner-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <input class="form-control focus" type="text" placeholder="Full name" name="txtbUserFName">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="left-inner-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                                 <input class="form-control focus" type="password" placeholder="Password" name="txtbPass">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <div class="left-inner-addon">
                                 <i class="glyphicon glyphicon-lock"></i>
                                 <input class="form-control focus" type="password" placeholder="Re-Password" name="txtbRePass">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="left-inner-addon">
-                                <i class="glyphicon glyphicon-user"></i>
-                                <input class="form-control focus" type="text" placeholder="Your full name" name="txtbCusName">
-                            </div>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <div class="left-inner-addon">
                                 <i class="glyphicon glyphicon-phone"></i>
-                                <input class="form-control focus" type="text" placeholder="Your phone number" name="txtbPhone">
+                                <input class="form-control focus" type="text" placeholder="Phone number" name="txtbPhone">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="left-inner-addon">
                                 <i class="glyphicon glyphicon-home"></i>
-                                <input class="form-control focus" type="text" placeholder="Your address" name="txtbAddress">
+                                <input class="form-control focus" type="text" placeholder="Address" name="txtbAddress">
                             </div>
                         </div>
                         <button class="btn btn-info" type="submit" name="btnRegister">Registration</button>

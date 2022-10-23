@@ -22,7 +22,7 @@ if (isset($_SESSION['us']) == false) {
         if (isset($_GET["function"]) == "del") {
             if (isset($_GET["id"])) {
                 $id = $_GET["id"];
-                pg_query($conn, "DELETE FROM Product WHERE ProductID ='$id'");
+                pg_query($Connect, "DELETE FROM product WHERE productid ='$id'");
             }
         }
         ?>
@@ -39,7 +39,8 @@ if (isset($_SESSION['us']) == false) {
                         <th><strong>Product Name</strong></th>
                         <th><strong>Price</strong></th>
                         <th><strong>Quantity</strong></th>
-                        <th><strong>Category Name</strong></th>
+                        <th><strong>Suplier ID</strong></th>
+                        <th><strong>Product Quantity</strong></th>
                         <th><strong>Image</strong></th>
                         <th><strong>Edit</strong></th>
                         <th><strong>Delete</strong></th>
@@ -50,21 +51,23 @@ if (isset($_SESSION['us']) == false) {
                     <?php
                     include_once("Connect.php");
                     $No = 1;
-                    $result = pg_query($conn, "SELECT ProductID, ProductName, Price, ProductQuantity, CatgoryID, SuppilerID FROM Product a, Category b WHERE a.CatgoryID=b.CatogryID ORDER BY ProductDate DESC");
+                    $result = pg_query($conn, "SELECT productid, productname, price, suppilerid, productquantity, storeid, categoryid, proimg  FROM product");
                     while ($row = pg_fetch_array($result)) {
                     ?>
                         <tr>
                             <td><?php echo $No;  ?></td>
-                            <td><?php echo $row["ProductID"]; ?></td>
-                            <td><?php echo $row["ProductName"]; ?></td>
-                            <td><?php echo $row["Price"]; ?></td>
-                            <td><?php echo $row["ProductQuantity"]; ?></td>
-                            <td><?php echo $row["CatgoryName"]; ?></td>
-                            <td align='center' class='ProductImages'>
-                                <img src='Images/<?php echo $row['ProductImg'] ?>' border='0' width="50" height="50" />
+                            <td><?php echo $row["productid"]; ?></td>
+                            <td><?php echo $row["productname"]; ?></td>
+                            <td><?php echo $row["price"]; ?></td>
+                            <td><?php echo $row["suppilerid"]; ?></td>
+                            <td><?php echo $row["productquantity"]; ?></td>
+                            <td><?php echo $row["storeid"]; ?></td>
+                            <td><?php echo $row["categoryid"]; ?></td>
+                            <td align='center' class='proimg'>
+                                <img src='Images/<?php echo $row['proimg'] ?>' border='0' width="50" height="50" />
                             </td>
-                            <td align='center' class='Update_Product'><a class="glyphicon glyphicon-pencil" href="?page=Update_Product&&id=<?php echo $row["ProductID"]; ?>"></a></td>
-                            <td align='center' class='Delete_Product'><a href="?page=Product&&function=del&&id=<?php echo $row["ProductID"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()"></a></td>
+                            <td align='center' class='Update_Product'><a class="glyphicon glyphicon-pencil" href="?page=Update_Product&&id=<?php echo $row["productid"]; ?>"></a></td>
+                            <td align='center' class='Delete_Product'><a href="?page=Product&&function=del&&id=<?php echo $row["productid"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()"></a></td>
                         </tr>
                     <?php
                         $No++;
