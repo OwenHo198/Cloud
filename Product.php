@@ -22,15 +22,13 @@ if (isset($_SESSION['us']) == false) {
         if (isset($_GET["function"]) == "del") {
             if (isset($_GET["id"])) {
                 $id = $_GET["id"];
-                pg_query($Connect, "DELETE FROM product WHERE productid ='$id'");
+                pg_query($conn, "DELETE FROM product WHERE productid ='$id'");
             }
         }
         ?>
         <form name="frm" method="post" action="">
             <h1>Product Management</h1>
-            <a class="glyphicon glyphicon-plus" href="?page=Add_Product">
-                Add
-            </a>
+            <a class="glyphicon glyphicon-plus" href="?page=Add_Product">Add</a>
             <table id="tableproduct" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>

@@ -32,6 +32,8 @@
           <li><a href="?page=Store">Store</a></li>
           <li><a href="?page=Category">Category</a></li>
           <li><a href="#About">About Us</a></li>
+         
+          <!-- <li><a href="?page=Search">	<i class="glyphicon glyphicon-search"></i> Search</a></li> -->
          <?php
           if (isset($_SESSION['us']) && $_SESSION['us'] != "") {
           ?>
@@ -54,16 +56,23 @@
           <?php
           }
           ?>
+           
         </ul>
+          <form class="d-flex" action="?page=Search" method="POST">
+              <input type="search" placeholder="Search" name="txtbSearch" aria-label="Search" style="margin-left: 20px;">
+              <button class="glyphicon glyphicon-search" name="btnsearch" type="submit" style="margin-top: 12px; margin-left:10px; color:black"></button>
+              <!-- <i class="glyphicon glyphicon-search"></i> -->
+          </form>
         <!--<div class="search">
           <div class="search_box pull-right">
             <input class="margin-top:-10px" type="text" placeholder="Searching..." />
           </div>
         </div>-->
+        
       </div>
     </div>
   </nav>
- 
+  
   <?php
   if (isset(($_GET['page']))) {
     $page = $_GET['page'];
@@ -111,6 +120,9 @@
     }
     elseif ($page == "Update_Store") {
       include_once("Update_Store.php");
+    }
+    elseif ($page == "Search") {
+      include_once("Search.php");
     }
   }
   else {
