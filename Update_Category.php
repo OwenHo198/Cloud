@@ -6,10 +6,10 @@
 		include_once("Connect.php");
 		if(isset($_GET["id"])){
 			$id=$_GET["id"];
-			$result=pg_query($conn, "SELECT * FROM category WHERE CategoryID='$id'");
+			$result=pg_query($conn, "SELECT * FROM category WHERE categoryid='$id'");
 			$row=pg_fetch_array($result);
-			$cat_id=$row['CategoryID'];
-			$cat_name=$row['CategoryName'];
+			$cat_id=$row['categoryid'];
+			$cat_name=$row['categoryname'];
 	?>
 	<?php
 		}
@@ -57,10 +57,10 @@
 				echo"<ul>$err</ul>";
 			}
 			else{
-				$sq="SELECT * From category WHERE CategoryID !='$id' and CategoryName='$name'";
+				$sq="SELECT * From category WHERE categoryid !='$id' and categoryname='$name'";
 				$result=pg_query($conn,$sq);
 				if(pg_num_rows($result)==0){
-					pg_query($conn, "UPDATE Category SET CategoryName='$name' WHERE CategoryID='$id'");
+					pg_query($conn, "UPDATE category SET categoryname='$name' WHERE categoryid='$id'");
 					echo '<meta http-equiv="refresh" content="0; URL=?page=Category" />';
 				}
 				else{

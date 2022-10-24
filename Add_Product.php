@@ -80,7 +80,7 @@
 			echo "<ul>$err</ul>";	
 		}
 		else{
-			if($pic['type']=="images/jpg" || $pic['type']=="image/jpeg" || $pic['type']=="image/png" || $pic['type']=="image/gif"){
+			if($pic['type']=="images/jpg" || $pic['type']=="images/jpeg" || $pic['type']=="images/png" || $pic['type']=="image/gif"){
 				if($pic['size']<=614400){
 					$sq="Select * from product where productid='$id'or productname='$proname'";
 					$result=pg_query($conn, $sq);
