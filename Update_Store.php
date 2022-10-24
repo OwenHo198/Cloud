@@ -1,8 +1,8 @@
-     <!-- Bootstrap --> 
+     <!-- Bootstrap 
      <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <?php
+    <hp
 		include_once("Connect.php");
 		if(isset($_GET["id"])){
 			$id=$_GET["id"];
@@ -11,7 +11,7 @@
 			$store_id=$row['StoreID'];
 			$cat_name=$row['StoreName'];
 	?>
-	<?php
+	php
 		}
 		else{
 			echo'<meta http-equiv="refresh" content="0;URL=Store.php" />';
@@ -25,14 +25,14 @@
 						    <label for="txtbTen" class="col-sm-2 control-label">Store ID:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Store ID" readonly 
-								  value='<?php echo $store_id; ?>'>
+								  value='php echo $store_id; ?>'>
 							</div>
 				</div>	
 				 <div class="form-group">
 						    <label for="txtbTen" class="col-sm-2 control-label">Store Name:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Store Name" 
-								  value='<?php echo $cat_name; ?>'>
+								  value='php echo $cat_name; ?>'>
 							</div>
 				</div>
                     
@@ -44,7 +44,7 @@
 				</div>
 				</form>
 </div>
-    <?php
+    php
 		if(isset($_POST["btnUpdate"])){
 			$id=$_POST["txtbID"];
 			$name=$_POST["txtbName"];

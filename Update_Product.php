@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">
 <script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
-<?php
+php
     if(isset($_SESSION["admin"]) && $_SESSION["admin"]!=1)
     {
         echo "<script> alert('You are not administrator!')</script>";
@@ -8,7 +8,7 @@
     }
     else{
 ?>
-<?php
+php
 		include_once("Connect.php");
 		function bind_Category_List($conn, $selectedValue){
 			$sqlstring = "SELECT categoryid, categoryname from category";
@@ -72,14 +72,14 @@
 					<label for="txtTen" class="col-sm-2 control-label">Product ID:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbID" id="txtbID" class="form-control" 
-								  placeholder="Product ID" readonly value='<?php echo $id?>'/>
+								  placeholder="Product ID" readonly value='php echo $id?>'/>
 							</div>
 				</div> 
 				<div class="form-group"> 
 					<label for="txtTen" class="col-sm-2 control-label">Product Name:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbPro_Name" id="txtbPro_Name" class="form-control" 
-								  placeholder="Product Name" value='<?php echo $pro_name?>'/>
+								  placeholder="Product Name" value='php echo $pro_name?>'/>
 							</div>
                 </div>
 				<div class="form-group">  
@@ -91,7 +91,7 @@
 				<div class="form-group">   
                     <label for="" class="col-sm-2 control-label">Supplier ID:  </label>
 							<div class="col-sm-10">
-							      <?php bind_Supplier_List($conn,$category);?>
+							      php bind_Supplier_List($conn,$category);?>
 							</div>
                 </div>
 				<div class="form-group">  
@@ -103,26 +103,26 @@
 				<div class="form-group">   
                     <label for="" class="col-sm-2 control-label">Store ID:  </label>
 							<div class="col-sm-10">
-							      <?php bind_Store_List($conn,$category);?>
+							      php bind_Store_List($conn,$category);?>
 							</div>
                 </div>
 				<div class="form-group">   
                     <label for="" class="col-sm-2 control-label">Category ID:  </label>
 							<div class="col-sm-10">
-							      <?php bind_Category_List($conn,$category);?>
+							      <hp bind_Category_List($conn,$category);?>
 							</div>
                 </div>
 				<div class="form-group">  
 	                <label for="sphinhanh" class="col-sm-2 control-label">Image:  </label>
 							<div class="col-sm-10">
-							<img src='images/<?php echo $image ?>' border='0' width="50" height="auto"  />
+							<img src='images/<php echo $image ?>' border='0' width="50" height="auto"  />
 							      <input type="file" name="txtbImage" id="txtbImage" class="form-control" value=""/>
 							</div>
                 </div>  
-                <!-- <div class="form-group">   
+                < <div class="form-group">   
                     <label for="lblShort" class="col-sm-2 control-label">Short description:  </label>
 							<div class="col-sm-10">
-							      <input type="text" name="txtbSmall" id="txtbSmall" class="form-control" placeholder="Small description" value='<?php echo $short_des ?>'/>
+							      <input type="text" name="txtbSmall" id="txtbSmall" class="form-control" placeholder="Small description" value='<php echo $short_des ?>'/>
 							</div>
                 </div> -->
                 <!-- <div class="form-group">  
@@ -150,7 +150,7 @@
                                     </script> 
                                   
 							</div>
-                </div> -->
+                </div> 
                             
             	
  
@@ -165,7 +165,7 @@
 				</div>
 			</form>
 </div>
-<?php
+php
 	if (isset($_POST["btnUpdate"])) {
 		$id=$_POST["txtbID"];
 		$proname=$_POST["txtbName"];
@@ -242,12 +242,12 @@
 		}
 	}
 	?>
-<?php
+php
         }
     else{
         echo '<meta http-equiv="refresh" content="0;URL=?page=Product"/>';
     }
 ?>
-<?php	
+php	
 	}
-?>
+?>-->
