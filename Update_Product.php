@@ -59,9 +59,11 @@
 			$row = pg_fetch_array($result);
 			$pro_name 	= $row["productname"];
 			$price 		= $row["price"];
+			$supid		= $row["suppilerid"];
 			$qty 		= $row["productquantity"];
-			$image 		= $row["proimg"];
-			$category 	= $row["categoryid"];
+			$storeid 		= $row["storeid"];
+			$catid 	= $row["categoryid"];
+			$pic 		= $row["proimg"];
 	?>
 <div class="container">
 	<h2>Updating Product</h2>
