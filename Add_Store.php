@@ -10,7 +10,7 @@
 			 $addr=$_POST["txtbAddr"];
 			 $err="";
 			 if($id==""){
-				 $err.="<li>Please enter Store ID!</li>";
+				 $err.="<li>Please enter store ID!</li>";
 			 }
 			 if($name==""){
 				 $err.="<li>Please enter store name!</li>";

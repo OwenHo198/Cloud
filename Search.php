@@ -16,6 +16,7 @@
                     <th><strong>Product Name</strong></th>
                     <th><strong>Price</strong></th>
                     <th><strong>Images</strong></th>
+                    <th><strong></strong></th>
             </tr>
         </thead>
 			<body>
@@ -30,7 +31,8 @@
               <td><?php echo $row["price"] ?></td>
               <td align='center' class='columnfunction'>
                         <img src='images/<?php echo $row["proimg"] ?>' border='0' width="50px" height="60px" />
-                        </td>
+              </td>
+              <td style="">Buy</td>
                         <!-- <td align='center' class='columnfunction'>
                         <a href="#" class="btn btn-warning" style="color:black">Buy</a>
                         </td> -->

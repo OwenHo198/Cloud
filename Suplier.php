@@ -28,7 +28,7 @@ include_once("Connect.php");
 <form name="frm" method="post" action="">
         <h1>Supplier Managment</h1>
         <p>
-            <a class="glyphicon glyphicon-plus" href="?page=Add_Suplier" style="margin-left:0px">Add</a>
+            <a class="glyphicon glyphicon-plus" href="?page=Add_Suplier" style="margin-left:0px; font-size:20px">ADD</a>
         </p>
         <table id="tablesuplier" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
