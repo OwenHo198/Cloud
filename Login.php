@@ -8,9 +8,6 @@
 	{
 		$us = $_POST['txtbUsername'];
 		$pa = $_POST['txtbpassword'];
-    echo $us;
-    echo $pa;
-
 		$err = "";
 		if($us=="") 
 		{

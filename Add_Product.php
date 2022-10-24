@@ -80,12 +80,12 @@
 			echo "<ul>$err</ul>";	
 		}
 		else{
-			if($pic['type']=="image/jpg" || $pic['type']=="image/jpeg" || $pic['type']=="image/png" || $pic['type']=="image/gif"){
+			if($pic['type']=="images/jpg" || $pic['type']=="image/jpeg" || $pic['type']=="image/png" || $pic['type']=="image/gif"){
 				if($pic['size']<=614400){
 					$sq="Select * from product where productid='$id'or productname='$proname'";
 					$result=pg_query($conn, $sq);
 					if(pg_num_rows($result)==0){
-						copy($pic['tmp_name'], "Images/".$pic['name']);
+						copy($pic['tmp_name'], "images/".$pic['name']);
 						$filePic=$pic['name'];
 						$sql="INSERT INTO product (productid, productname, price, suppilerid, productquantity, storeid, categoryid, proimg)
                                     		VALUES('$id', '$proname', '$price', '$supid','$qty', '$storeid', '$catid', '$filePic')";
