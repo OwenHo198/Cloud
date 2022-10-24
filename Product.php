@@ -63,7 +63,7 @@ if (isset($_SESSION['us']) == false) {
                             <td><?php echo $row["storeid"]; ?></td>
                             <td><?php echo $row["categoryid"]; ?></td>
                             <td align='center' class='proimg'>
-                                <img src='images/<?php echo $row['proimg'] ?>' border='0' width="50" height="50" />
+                                <img src='images/<?php echo $row['proimg'] ?>' border='0' width="50px" height="50px" />
                             </td>
                             <td align='center' class='Update_Product'><a class="glyphicon glyphicon-pencil" href="?page=Update_Product&&id=<?php echo $row["productid"]; ?>"></a></td>
                             <td align='center' class='Delete_Product'><a href="?page=Product&&function=del&&id=<?php echo $row["productid"]; ?>" class="glyphicon glyphicon-trash" onclick="return deleteConfirm()"></a></td>

@@ -198,9 +198,9 @@
     				</script>
 
     			</div>
-    		</div> -->
+    		</div> 
 
-    		<!-- <div class="form-group">
+    		<div class="form-group">
     			<label for="lblSoLuong" class="col-sm-2 control-label">Quantity: </label>
     			<div class="col-sm-10">
     				<input type="number" name="txtbqty" id="txtbqty" class="form-control" placeholder="Quantity" value="" />
@@ -212,7 +212,7 @@
     		<div class="form-group">
     			<div class="col-sm-offset-2 col-sm-10">
     				<input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Add" />
-    				<input type="button" class="btn btn-primary" name="btnIgnore" id="btnIgnore" value="Ignore" onclick="window.location='index.php'" />
+    				<input type="button" class="btn btn-primary" name="btnIgnore" id="btnCancel" value="Cancel" onclick="window.location='Product.php'" />
 
     			</div>
     		</div>
