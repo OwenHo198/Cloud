@@ -1,8 +1,8 @@
-     <!-- Bootstrap --> 
+     <!-- Bootstrap 
      <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <?php
+    php
 		include_once("Connect.php");
 		if(isset($_GET["id"])){
 			$id=$_GET["id"];
@@ -11,7 +11,7 @@
 			$cat_id=$row['categoryid'];
 			$cat_name=$row['categoryname'];
 	?>
-	<?php
+	php
 		}
 		else{
 			echo'<meta http-equiv="refresh" content="0;URL=Category.php" />';
@@ -25,14 +25,14 @@
 						    <label for="txtbTen" class="col-sm-2 control-label">Category ID:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbID" id="txtbID" class="form-control" placeholder="Catepgy ID" readonly 
-								  value='<?php echo $cat_id; ?>'>
+								  value='php echo $cat_id; ?>'>
 							</div>
 				</div>	
 				 <div class="form-group">
 						    <label for="txtbTen" class="col-sm-2 control-label">Category Name:  </label>
 							<div class="col-sm-10">
 								  <input type="text" name="txtbName" id="txtbName" class="form-control" placeholder="Catepgy Name" 
-								  value='<?php echo $cat_name; ?>'>
+								  value='php echo $cat_name; ?>'>
 							</div>
 				</div>
                     
@@ -44,7 +44,7 @@
 				</div>
 				</form>
 </div>
-    <?php
+    <php
 		if(isset($_POST["btnUpdate"])){
 			$id=$_POST["txtbID"];
 			$name=$_POST["txtbName"];
@@ -68,4 +68,4 @@
 				}
 			}
 		}
-	?>
+	?> -->

@@ -27,28 +27,28 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="?page=Product">Products</a></li>
-          <li><a href="?page=Suplier">Supplier</a></li>
-          <li><a href="?page=Store">Store</a></li>
-          <li><a href="?page=Category">Category</a></li>
-          <li><a href="#About">About Us</a></li>
-         
+        <li><a href="index.php">Home</a></li>
           <!-- <li><a href="?page=Search">	<i class="glyphicon glyphicon-search"></i> Search</a></li> -->
          <?php
           if (isset($_SESSION['us']) && $_SESSION['us'] != "") {
           ?>
+            <li><a href="?page=Product">Products</a></li>
+            <li><a href="?page=Suplier">Supplier</a></li>
+            <li><a href="?page=Store">Store</a></li>
+            <li><a href="?page=Category">Category</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="btnUser"><i class="glyphicon glyphicon-user"  style="margin-left:20px"></i> Hi, <?php echo $_SESSION['us'] ?></a>
+              <a class="nav-link" href="#" id="btnUser"><i class="glyphicon glyphicon-user"></i> Hi, <?php echo $_SESSION['us'] ?></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?page=logout" id="btnLogout" class="glyphicon glyphicon-log-out">Logout <i class="bi bi-box-arrow-right"></i></a>
             </li>
+            
           <?php
           } else {
           ?>
             
             <li class="nav-item">
-              <a class="nav-link" href="?page=login" id="btnLogin" style="margin-left:30px" >Login&nbsp;<i class="bi bi-box-arrow-in-right"></i></a>
+              <a class="nav-link" href="?page=login" id="btnLogin" >Login&nbsp;<i class="bi bi-box-arrow-in-right"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?page=Register" id="btnRegister" >Register&nbsp;</i></a>
@@ -60,7 +60,7 @@
         </ul>
           <form class="d-flex" action="?page=Search" method="POST">
               <input type="search" placeholder="Search" name="txtbSearch" aria-label="Search" style="margin-left: 20px;">
-              <button class="glyphicon glyphicon-search" name="btnsearch" type="submit" style="margin-top: 12px; margin-left:10px; color:black"></button>
+              <button name="btnsearch" type="submit" style="margin-top: 12px; margin-left:10px">Search</button>
               <!-- <i class="glyphicon glyphicon-search"></i> -->
           </form>
         <!--<div class="search">

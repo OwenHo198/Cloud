@@ -28,7 +28,7 @@ if (isset($_SESSION['us']) == false) {
         ?>
         <form name="frm" method="post" action="">
             <h1>Product Management</h1>
-            <a class="glyphicon glyphicon-plus" href="?page=Add_Product" style="font-size:20px">ADD</a>
+            <a  href="?page=Add_Product" style="font-size:20px">ADD</a>
             <table id="tableproduct" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>

@@ -48,8 +48,8 @@ class="d-block w-100"-->
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a> 
-</div> -->
-<!--<table>
+</div> 
+<table>
   <tr>
     <td>
       <img src="images/ToyStore-OwenStore.png" />
@@ -67,15 +67,15 @@ class="d-block w-100"-->
       <img src="images/iPhone13Pro.PNG" style="width:450px; margin-left:450px" />
     </td>
   </tr>
-  <tr> -->
-    <!-- <td>
+  <tr> 
+    <td>
       <br>
       <p style="font-size:80px; color:black; margin-left:350px; margin-top: 50px">
         Supercharged for pros.
       </p>
     </td>
-  </tr> -->
-  <!-- <tr>
+  </tr> 
+  <tr>
     <td>
       <img src="images/MacBookPro.jpg" style="width:650px; margin-left:350px" />
     </td>
@@ -107,9 +107,9 @@ class="d-block w-100"-->
       <img src="images/iPhoneSEMainPage.PNG" style="width:600px; margin-left:350px" />
     </td>
   </tr>
-</table>  -->
+</table> 
 
-<!--<table> 
+<table> 
   show -->
 
   <table class="text-center">
@@ -131,8 +131,7 @@ class="d-block w-100"-->
             <div class="card-body text-center">
               <img src="images/<?php echo $row['proimg'] ?>" class="card-img-top " width="400px" height="250px">
               <h5 class="card-title"><?php echo $row['productname'] ?></h5>
-              <p class="card-text">From $<?php echo $row['price'] ?></p>
-              <a href="index.php" class="btn btn-primary">Learn More</a>
+              
             </div>
           </td>
       <?php
@@ -144,9 +143,8 @@ class="d-block w-100"-->
           <td>
             <div class="card-body text-center">
               <img src="images/<?php echo $row['proimg'] ?>" class="card-img-top " width="400px" height="250px">
-              <h5 class="card-title"><?php echo $row['productname'] ?></h5>
-              <p class="card-text">From $<?php echo $row['price'] ?></p>
-              <a href="index.php" class="btn btn-primary">Learn More</a>
+              <h5 class="card-title" style="font-size:90px;"><?php echo $row['productname'] ?></h5>
+              
             </div>
           </td>
           <?php
@@ -171,7 +169,6 @@ class="d-block w-100"-->
   </div>
 </table>
 </body>
-
 </html>
 
 

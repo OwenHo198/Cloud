@@ -213,7 +213,6 @@
     			<div class="col-sm-offset-2 col-sm-10">
     				<input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Add" />
     				<input type="button" class="btn btn-primary" name="btnIgnore" id="btnCancel" value="Cancel" onclick="window.location='Product.php'" />
-
     			</div>
     		</div>
     	</form>
