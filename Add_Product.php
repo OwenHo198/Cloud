@@ -50,7 +50,6 @@
 		$supid=$_POST["SupplierList"];
 		// $CatName=$_POST['txtbCatName'];
 		$pic=$_FILES['txtbImage'];
-		
 		$err="";
 		if(trim($id)==""){
 			$err.="<li>Please enter product ID!</li>";
@@ -80,9 +79,9 @@
 			echo "<ul>$err</ul>";	
 		}
 		else{
-			if($pic['type']=="images/jpg" || $pic['type']=="images/jpeg" || $pic['type']=="images/png" || $pic['type']=="image/gif"){
+			if($pic['type']=="image/jpg" || $pic['type']=="image/jpeg" || $pic['type']=="image/png" || $pic['type']=="image/gif"){
 				if($pic['size']<=614400){
-					$sq="Select * from product where productid='$id'or productname='$proname'";
+					$sq="SELECT * from product where productid='$id'or productname='$proname'";
 					$result=pg_query($conn, $sq);
 					if(pg_num_rows($result)==0){
 						copy($pic['tmp_name'], "images/".$pic['name']);
