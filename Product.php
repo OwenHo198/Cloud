@@ -39,6 +39,7 @@ if (isset($_SESSION['us']) == false) {
                         <th><strong>Supplier ID</strong></th>
                         <th><strong>Product Quantity</strong></th>
                         <th><strong>Store ID</strong></th>
+                        <th><strong>Category ID</strong></th>
                         <th><strong>Image</strong></th>
                         <th><strong>Edit</strong></th>
                         <th><strong>Delete</strong></th>
