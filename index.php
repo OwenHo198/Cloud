@@ -22,28 +22,39 @@
           <span class="icon-bar"></span>
         </button>
         <a style="width:100px" class="navbar-brand" href="index.php">
-          <img style="width: 50px;height:auto; margin-top:-14px" src="images/ATN-Store.png" />
+          <img style="width: 52px;height:auto; margin-top:-16px" src="images/ATN-Store.png" />
         </a> 
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="#About">About</a></li>
           <!-- <li><a href="?page=Search">	<i class="glyphicon glyphicon-search"></i> Search</a></li> -->
          <?php
           if (isset($_SESSION['us']) && $_SESSION['us'] != "") {
+            if(isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
           ?>
-            <li><a href="?page=Product">Products</a></li>
-            <li><a href="?page=Suplier">Supplier</a></li>
-            <li><a href="?page=Store">Store</a></li>
-            <li><a href="?page=Category">Category</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="btnUser"><i class="glyphicon glyphicon-user"></i> Hi, <?php echo $_SESSION['us'] ?></a>
+              <a class="nav-link" href="index.php" id="btnUser"><i class="glyphicon glyphicon-user"  style="margin-left:20px"></i> Hi, <?php echo $_SESSION['us'] ?></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?page=logout" id="btnLogout" class="glyphicon glyphicon-log-out">Logout <i class="bi bi-box-arrow-right"></i></a>
             </li>
-            
           <?php
+            }
+            else{
+              ?>
+              <li><a href="?page=Product">Products</a></li>
+              <li><a href="?page=Suplier">Supplier</a></li>
+              <li><a href="?page=Store">Store</a></li>
+              <li><a href="?page=Category">Category</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.php" id="btnUser"><i class="glyphicon glyphicon-user"  style="margin-left:20px"></i> Hi, <?php echo $_SESSION['us'] ?></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="?page=logout" id="btnLogout" class="glyphicon glyphicon-log-out">Logout <i class="bi bi-box-arrow-right"></i></a>
+              </li>
+              <?php
+            }
           } else {
           ?>
             
@@ -59,8 +70,8 @@
            
         </ul>
           <form class="d-flex" action="?page=Search" method="POST">
-              <input type="search" placeholder="Search" name="txtbSearch" aria-label="Search" style="margin-left: 20px;">
-              <button name="btnsearch" type="submit" style="margin-top: 12px; margin-left:10px">Search</button>
+              <input type="search" placeholder="Searching..." name="txtbSearch" aria-label="Search" style="margin-left: 20px;">
+              <button class="glyphicon glyphicon-search" name="btnsearch" type="submit" style="margin-top: 12px; margin-left:10px; color:black"></button>
               <!-- <i class="glyphicon glyphicon-search"></i> -->
           </form>
         <!--<div class="search">

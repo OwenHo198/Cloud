@@ -3,11 +3,11 @@ if (isset($_SESSION['us']) == false) {
     echo "<script>alert('Please log-in!')</script>";
     echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 }
-else{
-    if(isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
-        echo "<script>alert('You're not adminitrator!')</script>";
-        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
-    } 
+// else{
+//     if(isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
+//         echo "<script>alert('You are not adminitrator!')</script>";
+//         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+//     } 
  else {
 ?>
     <script language="javascript">
@@ -31,7 +31,7 @@ else{
     <form name="frm" method="post" action="">
         <h1>Category Managment</h1>
         <p>
-            <a href="?page=Add_Category" style="margin-left:0px; font-size:20px">ADD</a>
+            <a class="glyphicon glyphicon-plus" href="?page=Add_Category" style="margin-left:0px; font-size:20px">ADD</a>
         </p>
         <table id="tablecategory" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
@@ -71,5 +71,5 @@ else{
     </form>
 <?php
     }
-}
+
 ?>

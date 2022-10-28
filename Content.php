@@ -20,7 +20,7 @@ include_once("Connect.php");
 <!--class="carousel-item active"
 class="d-block w-100"-->
 <div>
-      <img src="images/ToyStore-OwenStore.png">
+      <img style="margin-top: -19.5px" src="images/ToyStore-OwenStore.png">
 </div> 
 
 <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -124,14 +124,15 @@ class="d-block w-100"-->
       }
       while ($row = pg_fetch_array($res)) 
       {
-        if($No %7 !=0)
+        if($No %8 !=0)
         {
       ?>
           <td>
             <div class="card-body text-center">
               <img src="images/<?php echo $row['proimg'] ?>" class="card-img-top " width="400px" height="250px">
               <h5 class="card-title"><?php echo $row['productname'] ?></h5>
-              
+              <p class="card-text">From $<?php echo $row['price'] ?></p>
+              <a href="index.php" class="btn btn-primary">Learn More</a>
             </div>
           </td>
       <?php
@@ -143,8 +144,9 @@ class="d-block w-100"-->
           <td>
             <div class="card-body text-center">
               <img src="images/<?php echo $row['proimg'] ?>" class="card-img-top " width="400px" height="250px">
-              <h5 class="card-title" style="font-size:90px;"><?php echo $row['productname'] ?></h5>
-              
+              <h5 class="card-title" ><?php echo $row['productname'] ?></h5>
+              <p class="card-text">From $<?php echo $row['price'] ?></p>
+              <a href="index.php" class="btn btn-primary">Learn More</a>
             </div>
           </td>
           <?php

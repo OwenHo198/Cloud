@@ -16,7 +16,7 @@
                     <th><strong>Product Name</strong></th>
                     <th><strong>Price</strong></th>
                     <th><strong>Images</strong></th>
-                    
+                    <th><strong></strong></th>
             </tr>
         </thead>
 			<body>
@@ -28,12 +28,12 @@
 			<tr>
               <td class="cotcheckbox"><?php echo $No; ?></td>
               <td><?php echo $row["productname"] ?></td>
-              <td><?php echo $row["price"] ?></td>
+              <td><?php echo $row["price"] ?> $</td>
               <td align='center' class='columnfunction'>
-                        <img src='images/<?php echo $row["proimg"] ?>' border='0' width="50" height="50" />
+                        <img src='images/<?php echo $row["proimg"] ?>' border='0' width="auto" height="600px" />
               </td>
               <td >
-              <button type="submit" class="btn btn-primary">BUY</button>
+              <button type="submit" class="btn btn-primary" style="margin-left:10%; width:80px">BUY</button>
                         <!-- <td align='center' class='columnfunction'>
                         <a href="#" class="btn btn-warning" style="color:black">Buy</a>
                         </td> -->

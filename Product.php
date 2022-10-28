@@ -3,10 +3,13 @@
 if (isset($_SESSION['us']) == false) {
     echo "<script>alert('Please log-in!')</script>";
     echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
-} else {
-    if (isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
-        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
-    } else {
+} 
+// else {
+//     if (isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
+//         echo "<script>alert('You are not adminitrator!')</script>";
+//         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+    
+    else {
 ?>
         <script>
             function deleteConfirm() {
@@ -28,7 +31,7 @@ if (isset($_SESSION['us']) == false) {
         ?>
         <form name="frm" method="post" action="">
             <h1>Product Management</h1>
-            <a  href="?page=Add_Product" style="font-size:20px">ADD</a>
+            <a class="glyphicon glyphicon-plus" href="?page=Add_Product" style="font-size:20px">ADD</a>
             <table id="tableproduct" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
@@ -57,7 +60,7 @@ if (isset($_SESSION['us']) == false) {
                             <td><?php echo $No;  ?></td>
                             <td><?php echo $row["productid"]; ?></td>
                             <td><?php echo $row["productname"]; ?></td>
-                            <td><?php echo $row["price"]; ?></td>
+                            <td><?php echo $row["price"]; ?> $</td>
                             <td><?php echo $row["suppilerid"]; ?></td>
                             <td><?php echo $row["productquantity"]; ?></td>
                             <td><?php echo $row["storeid"]; ?></td>
@@ -79,5 +82,4 @@ if (isset($_SESSION['us']) == false) {
         </form>
 <?php
     }
-}
 ?>

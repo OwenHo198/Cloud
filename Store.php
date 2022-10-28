@@ -4,6 +4,7 @@ if (isset($_SESSION['us']) == false) {
     echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 } else {
     if (isset($_SESSION['admin']) && $_SESSION['admin'] != 1) {
+        echo "<script>alert('You are not adminitrator!')</script>";
         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else {
 ?> 
@@ -28,7 +29,7 @@ include_once("Connect.php");
 <form name="frm" method="post" action="">
         <h1>Store Managment</h1>
         <p>
-            <a  href="?page=Add_Store" style="margin-left:0px; font-size:20px">ADD</a>
+            <a class="glyphicon glyphicon-plus" href="?page=Add_Store" style="margin-left:0px; font-size:20px">ADD</a>
         </p>
         <table id="tablecategory" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
